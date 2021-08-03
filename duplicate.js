@@ -1,29 +1,3 @@
-const unmodifiedTestArr = [1, 2, 3, 4]
-const unmodifiedTestObj = {one: 1, two: 2, three: 3, four: 4}
-const nonsenseArr = [1, 0, 'a', "", "maru", null, "choux", NaN, false, "doge", undefined]
-const justOkArr = [1, 'a', "maru", "choux", "doge"]
-const unsortedIntArr = [3, 8, 5, 1, 9, 11, 8]
-const unsortedStringArr = ["maru", "choux", "doge", "coconut"]
-const unsortedObjArr = [
-  {name: "dennis", age: 29},
-  {name: "dee", age: 40},
-  {name: "mac", age: 34},
-  {name: "charlie", age: 32},
-  {name: "frank", age: 72}
-]
-function sortArrFunction(val) { return val }
-function sortIntsBySin(val)   { return Math.sin(val) }
-function sortObjFunction(obj) { return obj.age }
-const nestedArr = [1, [2, 3], [[4, 5], 6, [7, [8, 9]]]]
-const testObject = {
-  a: "",
-  z: () => null,
-  p: "",
-  c: () => null,
-  k: () => null,
-}
-
-
 const fi = (function() {
   return {
     libraryMethod: function() {
@@ -194,12 +168,11 @@ const fi = (function() {
     },
 
     keys: function(obj){
-      return Object.keys(obj)
-      // let keys = []
-      // for(let key in obj){
-      //   keys.push(key)
-      // }
-      // return keys
+      let keys = []
+      for(let key in obj){
+        keys.push(key)
+      }
+      return keys
     },
 
     values: function(obj){
